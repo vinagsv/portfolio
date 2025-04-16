@@ -25,7 +25,7 @@ export function Portfolio() {
                 key={e.title}
                 src={e.src}
                 title={e.title}
-                description={e.description} {/* Ensure using 'description' */}
+                description={e.description}
                 pageLink={e.pageLink}
                 sourceLink={e.sourceLink}
                 skills={e.skills}
