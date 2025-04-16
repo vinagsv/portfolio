@@ -5,7 +5,7 @@ import db from "../database/bd.json";
 
 export function Portfolio() {
   return (
-    <div className="bg-light" id="portfolio">
+    <div className="bg-[#c9eaf6]" id="portfolio">
       <div className="wrapper px-4 py-36">
         <div className="flex justify-between flex-wrap gap-y-4">
           <h1 className="text-dark text-4xl">PROJECTS..</h1>
