@@ -1,0 +1,38 @@
+{
+  "portfolio": {
+    "web": [
+      {
+        "src": "images/web/bookstore.png",
+        "title": "Book Store Application",
+        "description": "",
+        "pageLink": "https://github.com/vinagsv/book-listing",
+        "sourceLink": "https://github.com/vinagsv/book-listing",
+        "skills": ["react", "javascript", "css"]
+      },
+      {
+        "src": "images/web/weather-app.png",
+        "title": "weather app",
+        "description": "",
+        "pageLink": "https://github.com/vinagsv/react-weather-app",
+        "sourceLink": "https://github.com/vinagsv/react-weather-app",
+        "skills": ["react", "javascript", "css"]
+      },
+      {
+        "src": "images/web/todo.png",
+        "title": "Todo Application",
+        "description": "",
+        "pageLink": "https://todolevel1.netlify.app/",
+        "sourceLink": "https://github.com/vinagsv/wsa_todo",
+        "skills": ["html", "css", "js"]
+      },
+      {
+        "src": "images/web/recipe-finder.png",
+        "title": "Recipe Finder App",
+        "description": "",
+        "pageLink": "https://codesandbox.io/p/sandbox/hardcore-newton-93mnl7",
+        "sourceLink": "https://codesandbox.io/p/sandbox/hardcore-newton-93mnl7",
+        "skills": ["react", "css"]
+      }
+    ]
+  }
+}
