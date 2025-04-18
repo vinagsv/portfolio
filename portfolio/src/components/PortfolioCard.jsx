@@ -1,5 +1,6 @@
 import { FiExternalLink } from "react-icons/fi";
 import { AiFillGithub } from "react-icons/ai";
+
 export function PortfolioCard({
   src,
   title,
@@ -9,10 +10,16 @@ export function PortfolioCard({
   skills,
 }) {
   return (
-    <div className="text-dark w-full rounded-lg overflow-hidden group">
-      <div className="h-[20rem] m-4 mb-0 shadow-md overflow-hidden sm:h-[13rem]">
+    <div
+      className="w-full portfolio-card transition-transform hover:scale-[1.02] rounded-[15px] "
+      style={{
+        background:
+          "linear-gradient(38deg,rgba(176, 241, 245, 1) 2%, rgba(202, 224, 230, 1) 30%, rgba(146, 238, 252, 1) 90%)",
+      }}
+    >
+      <div className="h-[20rem] m-4 mb-0 shadow-md overflow-hidden sm:h-[13rem] rounded-md">
         <img
-          className="bg-dark h-full w-full object-cover xl:group-hover:scale-[1.15] transition-transform"
+          className="bg-dark h-full w-full object-cover transition-transform duration-300"
           src={src}
           alt={title}
           loading="lazy"
@@ -42,6 +49,14 @@ export function PortfolioCard({
           )}
         </div>
       </div>
+
+      <style>
+        {`
+      .portfolio-card:hover {
+      box-shadow: 0 0 35px 10px #6feaf7;
+      }
+  `}
+      </style>
     </div>
   );
 }

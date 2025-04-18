@@ -10,17 +10,17 @@ import { Portfolio } from "./layout/Portfolio";
 import { Footer } from "./layout/Footer";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-	<React.StrictMode>
-		<header className="bg-dark text-light">
-			<Nav />
-			<Hero />
-		</header>
-		<main>
-			<About/>
-			<Services/>
-			<Experience/>
-			<Portfolio/>
-		</main>
-		<Footer/>
-	</React.StrictMode>
+  <React.StrictMode>
+    <header className="bg-dark text-light">
+      <Nav />
+      <Hero />
+    </header>
+    <main>
+      <About />
+      <Services />
+      <Experience />
+      <Portfolio />
+    </main>
+    <Footer />
+  </React.StrictMode>
 );

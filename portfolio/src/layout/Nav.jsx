@@ -31,17 +31,18 @@ function Mobile() {
       </div>
       {renderMenu && (
         <ul className="space-y-2 text-2xl xl:hidden">
-          <Link content="inicio" href="#" />
-          <Link content="sobre mi" href="#about" />
-          <Link content="servicios" href="#services" />
-          <Link content="tecnologias" href="#experience" />
-          <Link content="portafolio" href="#portfolio" />
-          <Link content="contacto" href="#contact" />
+          <Link content="home" href="#" />
+          <Link content="about me" href="#about" />
+          <Link content="services" href="#services" />
+          <Link content="technologies" href="#experience" />
+          <Link content="portfolio" href="#portfolio" />
+          <Link content="contact" href="#contact" />
         </ul>
       )}
     </>
   );
 }
+
 function Desktop() {
   return (
     <div className="hidden justify-between items-center xl:flex">
@@ -51,15 +52,15 @@ function Desktop() {
         animate={{ scaleX: 1 }}
         transition={{ delay: 0.5 }}
       >
-        portfolio
+        vinag sv
       </motion.h1>
 
       <ul className="flex gap-6 text-2xl">
         <Link content="home" href="#" motionDelay={0.5} />
         <Link content="about me" href="#about" motionDelay={0.6} />
-        <Link content="skills" href="#services" motionDelay={0.7} />
-        <Link content="tech stack" href="#experience" motionDelay={0.8} />
-        <Link content="projects" href="#portfolio" motionDelay={0.9} />
+        <Link content="services" href="#services" motionDelay={0.7} />
+        <Link content="technologies" href="#experience" motionDelay={0.8} />
+        <Link content="portfolio" href="#portfolio" motionDelay={0.9} />
         <Link content="contact" href="#contact" motionDelay={1} />
       </ul>
     </div>
