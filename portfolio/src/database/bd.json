@@ -32,6 +32,14 @@
         "pageLink": "https://codesandbox.io/p/sandbox/hardcore-newton-93mnl7",
         "sourceLink": "https://codesandbox.io/p/sandbox/hardcore-newton-93mnl7",
         "skills": ["react", "css"]
+      },
+      {
+        "src": "images/web/assignments.webp",
+        "title": "Assignments",
+        "description": "Practice assignmets completed",
+        "pageLink": "https://wsa-assignments.netlify.app/",
+        "sourceLink": "https://github.com/vinagsv/wsa_assignments",
+        "skills": ["react", "css", "javascript"]
       }
     ]
   }
