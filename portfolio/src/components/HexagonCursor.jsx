@@ -1,10 +1,20 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const HexagonCursor = () => {
   const canvasRef = useRef(null);
   const mouse = useRef({ x: window.innerWidth / 2, y: window.innerHeight / 2 });
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768); // treat width <= 768px as mobile
 
   useEffect(() => {
+    const checkIfMobile = () => setIsMobile(window.innerWidth <= 768);
+    checkIfMobile();
+    window.addEventListener("resize", checkIfMobile);
+    return () => window.removeEventListener("resize", checkIfMobile);
+  }, []);
+
+  useEffect(() => {
+    if (isMobile) return; // Skip setting up the canvas on mobile
+
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
 
@@ -59,7 +69,9 @@ const HexagonCursor = () => {
       window.removeEventListener("resize", resizeCanvas);
       window.removeEventListener("mousemove", handleMouseMove);
     };
-  }, []);
+  }, [isMobile]);
+
+  if (isMobile) return null;
 
   return (
     <canvas
