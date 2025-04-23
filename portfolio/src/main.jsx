@@ -8,9 +8,11 @@ import { Experience } from "./layout/Experience";
 import "./styles/tailwind.css";
 import { Portfolio } from "./layout/Portfolio";
 import { Footer } from "./layout/Footer";
+import HexagonCursor from "./components/HexagonCursor";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
+    <HexagonCursor /> {/*  hexagon cursor */}
     <header className="bg-dark text-light">
       <Nav />
       <Hero />
