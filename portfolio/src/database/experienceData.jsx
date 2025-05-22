@@ -6,10 +6,11 @@ import {
   SiGit,
   SiGithub,
   SiNodedotjs,
+  SiPython,
+  SiMongodb,
 } from "react-icons/si";
 import { FaHtml5, FaCss3Alt, FaBootstrap } from "react-icons/fa";
 import { DiJava } from "react-icons/di";
-import MongoDBIcon from "../assets/mongodbimg.png";
 import CppIcon from "../assets/cplusplusimg.png";
 
 export const experienceList = [
@@ -28,16 +29,20 @@ export const experienceList = [
     title: "javascript",
     custom: "text-amber-400",
   },
-
-  {
-    icon: <SiExpress />,
-    title: "express",
-    custom: "text-gray-600",
-  },
   {
     icon: <SiReact />,
     title: "react",
     custom: "text-cyan-500",
+  },
+  {
+    icon: <SiMongodb />,
+    title: "mongodb",
+    custom: "text-green-600",
+  },
+  {
+    icon: <SiExpress />,
+    title: "express",
+    custom: "text-gray-600",
   },
   {
     icon: <SiNodedotjs />,
@@ -70,16 +75,11 @@ export const experienceList = [
     custom: "text-red-600",
   },
   {
-    icon: (
-      <img
-        src={MongoDBIcon}
-        alt="MongoDB"
-        className="w-20 h-20 object-contain"
-      />
-    ),
-    title: "mongodb",
-    custom: "text-green-500",
+    icon: <SiPython />,
+    title: "python",
+    custom: "text-yellow-500",
   },
+
   {
     icon: <img src={CppIcon} alt="C++" className="w-20 h-20 object-contain" />,
     title: "c++",
