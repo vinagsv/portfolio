@@ -31,7 +31,7 @@ function Mobile() {
       </div>
       {renderMenu && (
         <ul className="space-y-2 text-2xl xl:hidden">
-          <Link content="home" href="#" />
+          <Link content="home" href="/" />
           <Link content="about me" href="#about" />
           <Link content="services" href="#services" />
           <Link content="technologies" href="#experience" />
@@ -56,7 +56,7 @@ function Desktop() {
       </motion.h1>
 
       <ul className="flex gap-6 text-2xl">
-        <Link content="home" href="#" motionDelay={0.5} />
+        <Link content="home" href="/" motionDelay={0.5} />
         <Link content="about me" href="#about" motionDelay={0.6} />
         <Link content="services" href="#services" motionDelay={0.7} />
         <Link content="technologies" href="#experience" motionDelay={0.8} />

@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Accordion App",
+    "description": "An interactive accordion component built with React.",
+    "sourceLink": "https://github.com/vinagsv/wsa-react/tree/main/accordian",
+    "pageLink": "https://accordian-wvr1.onrender.com/"
+  },
+  {
+    "title": "Pizza Menu",
+    "description": "A dynamic pizza menu interface displaying available pizzas.",
+    "sourceLink": "https://github.com/vinagsv/wsa-react/tree/main/pizza-menu",
+    "pageLink": "https://pizza-menu-wvr2.onrender.com/"
+  },
+  {
+    "title": "Random Duck Generator",
+    "description": "Generates random duck images using an API.",
+    "sourceLink": "https://github.com/vinagsv/wsa-react/tree/main/random-duck",
+    "pageLink": "https://random-duck-wvr3.onrender.com/"
+  },
+  {
+    "title": "Redux Toolkit Basics",
+    "description": "A sample project demonstrating Redux Toolkit usage.",
+    "sourceLink": "https://github.com/vinagsv/wsa-react/tree/main/reactreduxtoolkit",
+    "pageLink": "https://reactreduxtoolkit-wvr4.onrender.com/"
+  },
+  {
+    "title": "Step Project",
+    "description": "A step tracking application with progress functionality.",
+    "sourceLink": "https://github.com/vinagsv/wsa-react/tree/main/step-project",
+    "pageLink": "https://step-project-wvr6.onrender.com/"
+  },
+  {
+    "title": "Theme Switcher",
+    "description": "A React app for toggling light and dark themes.",
+    "sourceLink": "https://github.com/vinagsv/wsa-react/tree/main/themeswitcher",
+    "pageLink": "https://themeswitcher-wvr7.onrender.com/"
+  },
+  {
+    "title": "Todo App with Context API",
+    "description": "A todo list manager using React Context API.",
+    "sourceLink": "https://github.com/vinagsv/wsa-react/tree/main/todocontextapi",
+    "pageLink": "https://todocontextapi.onrender.com/"
+  },
+  {
+    "title": "Async Redux Toolkit",
+    "description": "Async actions with Redux Toolkit and API integration.",
+    "sourceLink": "https://github.com/vinagsv/wsa-react/tree/main/redux-rtk-async",
+    "pageLink": "https://redux-rtk-async-wvr5.onrender.com/"
+  },
+  {
+    "title": "usePopcorn Movie App",
+    "description": "A movie search and rating app built with React hooks.",
+    "sourceLink": "https://github.com/vinagsv/wsa-react/tree/main/usePopcorn",
+    "pageLink": "https://usepopcorn-wvr10.onrender.com/"
+  },
+  {
+    "title": "Travel Packing List",
+    "description": "An app to manage and organize your travel packing list.",
+    "sourceLink": "https://github.com/vinagsv/wsa-react/tree/main/travel-list",
+    "pageLink": "https://travel-list-1hsp.onrender.com/"
+  }
+]
