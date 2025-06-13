@@ -54,6 +54,12 @@
     "pageLink": "https://usepopcorn-wvr10.onrender.com/"
   },
   {
+    "title": "Book Store Application",
+    "description": "A simple book listing app built with React.",
+    "pageLink": "https://github.com/vinagsv/book-listing",
+    "sourceLink": "https://github.com/vinagsv/book-listing"
+  },
+  {
     "title": "Travel Packing List",
     "description": "An app to manage and organize your travel packing list.",
     "sourceLink": "https://github.com/vinagsv/wsa-react/tree/main/travel-list",

@@ -10,6 +10,14 @@
         "skills": ["react", "css", "javascript", "react", "java"]
       },
       {
+        "src": "images/web/quiz-app.png",
+        "title": "Quiz Application",
+        "description": "A quiz app",
+        "pageLink": "https://wsa-quiz-app-l2.onrender.com",
+        "sourceLink": "https://github.com/vinagsv/wsa_quiz_app/tree/main/level%202",
+        "skills": ["react", "daisyUI", "js", "node", "mongodb"]
+      },
+      {
         "src": "images/web/todo.png",
         "title": "Todo Application",
         "description": "A basic todo app with simple functionality.",
@@ -23,14 +31,6 @@
         "description": "A weather forecast app using React.",
         "pageLink": "https://github.com/vinagsv/react-weather-app",
         "sourceLink": "https://github.com/vinagsv/react-weather-app",
-        "skills": ["react", "javascript", "css"]
-      },
-      {
-        "src": "images/web/bookstore.png",
-        "title": "Book Store Application",
-        "description": "A simple book listing app built with React.",
-        "pageLink": "https://github.com/vinagsv/book-listing",
-        "sourceLink": "https://github.com/vinagsv/book-listing",
         "skills": ["react", "javascript", "css"]
       },
       {
