@@ -4,7 +4,8 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 
 import { About } from "./layout/About";
 import { Services } from "./layout/Services";
-import { Hero } from "./layout/Hero";
+import Hero from "./layout/Hero";
+// import { Hero } from "./layout/Hero";
 import { Nav } from "./layout/Nav";
 import { Experience } from "./layout/Experience";
 import { Portfolio } from "./layout/Portfolio";
