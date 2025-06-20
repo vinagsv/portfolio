@@ -35,8 +35,8 @@ function AppLayout() {
               <>
                 <About />
                 <Services />
-                <Experience />
                 <Portfolio />
+                <Experience />
               </>
             }
           />
