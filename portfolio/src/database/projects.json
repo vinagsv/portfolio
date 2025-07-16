@@ -24,6 +24,12 @@
     "pageLink": "https://reactreduxtoolkit-wvr4.onrender.com/"
   },
   {
+    "title": "Recipe Finder App",
+    "description": "Find recipes based on ingredients.",
+    "sourceLink": "https://codesandbox.io/p/sandbox/hardcore-newton-93mnl7",
+    "pageLink": "https://codesandbox.io/p/sandbox/hardcore-newton-93mnl7"
+  },
+  {
     "title": "Step Project",
     "description": "A step tracking application with progress functionality.",
     "sourceLink": "https://github.com/vinagsv/wsa-react/tree/main/step-project",

@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import * as THREE from "https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.module.js";
 import { createNoise4D } from "https://cdn.jsdelivr.net/npm/simplex-noise@4.0.1/+esm";
 import { motion } from "framer-motion";
@@ -18,6 +18,7 @@ const textVariants = {
 };
 
 const Hero = () => {
+  const [showPopup, setShowPopup] = useState(false);
   const canvasRef = useRef(null);
   const confRef = useRef({
     fov: 75,
@@ -31,6 +32,13 @@ const Hero = () => {
     light3Color: 0x18c02c,
     light4Color: 0xee3bcf,
   });
+
+  useEffect(() => {
+    if (window.innerWidth <= 768) {
+      setShowPopup(true);
+      setTimeout(() => setShowPopup(false), 4000);
+    }
+  }, []);
 
   useEffect(() => {
     let renderer, scene, camera;
@@ -67,7 +75,6 @@ const Hero = () => {
 
     function initScene() {
       scene = new THREE.Scene();
-
       const r = 30;
       const y = 10;
       const lightDistance = 500;
@@ -108,7 +115,6 @@ const Hero = () => {
         color: 0xffffff,
         side: THREE.DoubleSide,
       });
-
       const geo = new THREE.PlaneGeometry(
         wWidth,
         wHeight,
@@ -194,6 +200,17 @@ const Hero = () => {
 
   return (
     <section className="relative w-full h-screen bg-[#252237] overflow-hidden">
+      {showPopup && (
+        <div className="fixed top-6 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[#7044e6] via-[#1fe5f7] to-[#ee3bcf] text-white px-6 py-3 rounded-md shadow-lg flex items-center gap-4 z-50 animate-fade-in">
+          <span>This page is best viewed on PC</span>
+          <button
+            onClick={() => setShowPopup(false)}
+            className="text-xl leading-none hover:scale-110 transition-transform"
+          >
+            ✖
+          </button>
+        </div>
+      )}
       <canvas
         ref={canvasRef}
         className="absolute top-0 left-0 w-full h-full z-0"

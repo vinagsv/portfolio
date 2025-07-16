@@ -10,6 +10,14 @@
         "skills": ["react", "css", "javascript", "react", "java"]
       },
       {
+        "src": "images/web/homelyhub.png",
+        "title": "Homely Hub",
+        "description": "Explore experiences,your cozy stay.",
+        "pageLink": "https://wsa-homelyhub.netlify.app/",
+        "sourceLink": "https://github.com/vinagsv/wsa_homelyhub",
+        "skills": ["react", "daisyUI", "js", "node", "mongodb"]
+      },
+      {
         "src": "images/web/quiz-app.png",
         "title": "Quiz Application",
         "description": "A quiz app",
@@ -33,14 +41,7 @@
         "sourceLink": "https://github.com/vinagsv/react-weather-app",
         "skills": ["react", "javascript", "css"]
       },
-      {
-        "src": "images/web/recipe-finder.png",
-        "title": "Recipe Finder App",
-        "description": "Find recipes based on ingredients.",
-        "pageLink": "https://codesandbox.io/p/sandbox/hardcore-newton-93mnl7",
-        "sourceLink": "https://codesandbox.io/p/sandbox/hardcore-newton-93mnl7",
-        "skills": ["react", "css"]
-      },
+
       {
         "src": "images/web/wsa_calc.png",
         "title": "Calculator",
