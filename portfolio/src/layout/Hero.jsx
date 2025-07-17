@@ -19,6 +19,7 @@ const textVariants = {
 
 const Hero = () => {
   const [showPopup, setShowPopup] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const canvasRef = useRef(null);
   const confRef = useRef({
     fov: 75,
@@ -34,16 +35,19 @@ const Hero = () => {
   });
 
   useEffect(() => {
-    if (window.innerWidth <= 768) {
+    const mobileCheck = window.innerWidth <= 768;
+    setIsMobile(mobileCheck);
+    if (mobileCheck) {
       setShowPopup(true);
       setTimeout(() => setShowPopup(false), 4000);
     }
   }, []);
 
   useEffect(() => {
+    if (isMobile) return;
+
     let renderer, scene, camera;
     let width, height, wWidth, wHeight;
-    const TMath = THREE.MathUtils;
     const noise4D = createNoise4D();
     const mouse = new THREE.Vector2();
     const mousePlane = new THREE.Plane(new THREE.Vector3(0, 0, 1), 0);
@@ -159,7 +163,7 @@ const Hero = () => {
       light2.position.x = Math.cos(time * 0.3) * d;
       light2.position.z = Math.sin(time * 0.4) * d;
       light3.position.x = Math.sin(time * 0.5) * d;
-      light3.position.z = Math.sin(time * 0.6) * d;
+      light3.position.z = Math.cos(time * 0.6) * d;
       light4.position.x = Math.sin(time * 0.7) * d;
       light4.position.z = Math.cos(time * 0.8) * d;
     }
@@ -196,10 +200,11 @@ const Hero = () => {
       window.removeEventListener("resize", updateSize);
       renderer.dispose();
     };
-  }, []);
+  }, [isMobile]);
 
   return (
-    <section className="relative w-full h-screen bg-[#252237] overflow-hidden">
+    <>
+      {/* 1. The Popup is now a sibling to the section. It cannot push the content down. */}
       {showPopup && (
         <div className="fixed top-6 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[#7044e6] via-[#1fe5f7] to-[#ee3bcf] text-white px-6 py-3 rounded-md shadow-lg flex items-center gap-4 z-50 animate-fade-in">
           <span>This page is best viewed on PC</span>
@@ -211,52 +216,66 @@ const Hero = () => {
           </button>
         </div>
       )}
-      <canvas
-        ref={canvasRef}
-        className="absolute top-0 left-0 w-full h-full z-0"
-      />
-      <div className="relative z-10 max-w-5xl mx-auto px-6 pt-32 text-center flex flex-col items-center gap-8">
-        <motion.h1
-          className="text-5xl sm:text-6xl md:text-7xl font-semibold tracking-tight leading-tight 
-                     bg-gradient-to-r from-[#7044e6] via-[#1fe5f7] to-[#ee3bcf] 
-                     bg-[length:200%_200%] bg-clip-text text-transparent animate-gradient"
-          initial="hidden"
-          animate="visible"
-          custom={0.2}
-          variants={textVariants}
-        >
-          Full-Stack Web Developer
-        </motion.h1>
-        <motion.p
-          className="text-white text-lg sm:text-xl md:text-2xl mt-6 leading-relaxed font-light"
-          initial="hidden"
-          animate="visible"
-          custom={0.6}
-          variants={textVariants}
-        >
-          Hello! I’m <span className="font-medium text-[#8e68f3]">Vinag</span>,
-          a passionate software developer crafting engaging, modern, and
-          high-performance web experiences.
-        </motion.p>
-        <motion.button
-          className="bg-gradient-to-r from-[#7044e6] to-[#ee3bcf] uppercase text-xl px-6 py-3 rounded-full glow-hover relative group overflow-hidden transition-[width] focus:outline-none focus:ring-0 text-white"
-          initial="hidden"
-          animate="visible"
-          custom={1.0}
-          variants={textVariants}
-        >
-          <a
-            href="/docs/Vinag_Resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group-hover:mr-6 transition-[margin]"
+
+      <section className="relative w-full h-screen bg-[#252237] overflow-hidden flex flex-col justify-center items-center">
+        {/* The background is fine where it is */}
+        {!isMobile ? (
+          <canvas
+            ref={canvasRef}
+            className="absolute top-0 left-0 w-full h-full z-0"
+          />
+        ) : (
+          <img
+            src="/images/wave.svg"
+            alt="Wave"
+            className="absolute bottom-0 left-0 w-full h-[450px] object-contain object-left-bottom z-0"
+          />
+        )}
+
+        {/* 2. Content is now centered using Flexbox, no longer relying on pt-32. */}
+        <div className="relative z-10 max-w-5xl mx-auto px-6 text-center flex flex-col items-center gap-8">
+          <motion.h1
+            className="text-5xl sm:text-6xl md:text-7xl font-semibold tracking-tight leading-tight 
+                       bg-gradient-to-r from-[#7044e6] via-[#1fe5f7] to-[#ee3bcf] 
+                       bg-[length:200%_200%] bg-clip-text text-transparent animate-gradient"
+            initial="hidden"
+            animate="visible"
+            custom={0.2}
+            variants={textVariants}
           >
-            Get CV
-          </a>
-          <HiOutlineDocumentText className="text-white text-2xl absolute -right-7 top-1/2 -translate-y-1/2 group-hover:right-2 transition-[right]" />
-        </motion.button>
-      </div>
-    </section>
+            Full-Stack Web Developer
+          </motion.h1>
+          <motion.p
+            className="text-white text-lg sm:text-xl md:text-2xl mt-6 leading-relaxed font-light"
+            initial="hidden"
+            animate="visible"
+            custom={0.6}
+            variants={textVariants}
+          >
+            Hello! I’m <span className="font-medium text-[#8e68f3]">Vinag</span>
+            , a passionate software developer crafting engaging, modern, and
+            high-performance web experiences.
+          </motion.p>
+          <motion.button
+            className="bg-gradient-to-r from-[#7044e6] to-[#ee3bcf] uppercase text-xl px-6 py-3 rounded-full glow-hover relative group overflow-hidden transition-[width] focus:outline-none focus:ring-0 text-white"
+            initial="hidden"
+            animate="visible"
+            custom={1.0}
+            variants={textVariants}
+          >
+            <a
+              href="/docs/Vinag_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group-hover:mr-6 transition-[margin]"
+            >
+              Get CV
+            </a>
+            <HiOutlineDocumentText className="text-white text-2xl absolute -right-7 top-1/2 -translate-y-1/2 group-hover:right-2 transition-[right]" />
+          </motion.button>
+        </div>
+      </section>
+    </>
   );
 };
 
