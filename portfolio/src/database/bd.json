@@ -10,6 +10,14 @@
         "skills": ["react", "css", "javascript", "react", "java"]
       },
       {
+        "src": "images/web/quickbite.png",
+        "title": "QuickBite",
+        "description": "your one place for all your cravings for delicious foods",
+        "pageLink": "https://quickbite-2.netlify.app/",
+        "sourceLink": "https://github.com/vinagsv/QuickBite",
+        "skills": ["react", "daisyUI", "js", "node", "mongodb"]
+      },
+      {
         "src": "images/web/homelyhub.png",
         "title": "Homely Hub",
         "description": "Explore experiences,your cozy stay.",
@@ -40,15 +48,6 @@
         "pageLink": "https://github.com/vinagsv/react-weather-app",
         "sourceLink": "https://github.com/vinagsv/react-weather-app",
         "skills": ["react", "javascript", "css"]
-      },
-
-      {
-        "src": "images/web/wsa_calc.png",
-        "title": "Calculator",
-        "description": "web calculator",
-        "pageLink": "https://wsa-calculator.netlify.app/",
-        "sourceLink": "https://github.com/vinagsv/wsa_calculator",
-        "skills": ["react", "css", "javascript"]
       }
     ]
   }

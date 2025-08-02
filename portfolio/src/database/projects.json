@@ -70,5 +70,11 @@
     "description": "An app to manage and organize your travel packing list.",
     "sourceLink": "https://github.com/vinagsv/wsa-react/tree/main/travel-list",
     "pageLink": "https://travel-list-1hsp.onrender.com/"
+  },
+  {
+    "title": "Calculator",
+    "description": "web calculator",
+    "sourceLink": "https://github.com/vinagsv/wsa_calculator",
+    "pageLink": "https://wsa-calculator.netlify.app/"
   }
 ]
